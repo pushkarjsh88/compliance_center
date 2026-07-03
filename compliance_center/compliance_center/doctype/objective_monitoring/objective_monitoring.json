@@ -2,7 +2,6 @@
  "actions": [],
  "allow_bulk_edit": 1,
  "allow_rename": 1,
- "autoname": "REV-.#####",
  "creation": "2026-07-03 14:55:08.158524",
  "doctype": "DocType",
  "editable_grid": 1,
@@ -42,11 +41,10 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-07-03 15:51:46.278132",
+ "modified": "2026-07-03 17:45:21.130361",
  "modified_by": "Administrator",
  "module": "Compliance Center",
  "name": "Objective Monitoring",
- "naming_rule": "Expression (old style)",
  "owner": "Administrator",
  "permissions": [
   {

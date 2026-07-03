@@ -7,6 +7,14 @@ from frappe.utils import flt
 
 
 class ObjectiveMonitoring(Document):
+	def autoname(self):
+		if self.department:
+			department_code = self.department.split(" - ")[0].strip().upper().replace(" ", "-")
+		else:
+			department_code = "GENERAL"
+		period_code = (self.review_period or "").strip().upper().replace(" ", "-") or "PERIOD"
+		self.name = f"{department_code}-{period_code}"
+
 	def validate(self):
 		self.set_results()
 
