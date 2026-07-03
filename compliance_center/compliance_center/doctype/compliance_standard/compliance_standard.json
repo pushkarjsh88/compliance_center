@@ -1,0 +1,108 @@
+{
+ "actions": [],
+ "allow_bulk_edit": 1,
+ "allow_rename": 1,
+ "autoname": "field:standard_name",
+ "creation": "2026-07-03 16:09:53.023891",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "standard_name",
+  "standard_code",
+  "issuing_body",
+  "version",
+  "effective_date",
+  "status",
+  "scope",
+  "description"
+ ],
+ "fields": [
+  {
+   "fieldname": "standard_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Standard Name",
+   "reqd": 1,
+   "unique": 1,
+   "description": "e.g. ISO 9001:2015"
+  },
+  {
+   "fieldname": "standard_code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Standard Code",
+   "description": "e.g. ISO9001"
+  },
+  {
+   "fieldname": "issuing_body",
+   "fieldtype": "Data",
+   "label": "Issuing Body",
+   "description": "e.g. International Organization for Standardization"
+  },
+  {
+   "fieldname": "version",
+   "fieldtype": "Data",
+   "label": "Version",
+   "description": "e.g. 2015"
+  },
+  {
+   "fieldname": "effective_date",
+   "fieldtype": "Date",
+   "label": "Effective Date"
+  },
+  {
+   "default": "Active",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "Active\nInactive"
+  },
+  {
+   "fieldname": "scope",
+   "fieldtype": "Small Text",
+   "label": "Scope"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text",
+   "label": "Description"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [
+  {
+   "group": "Audits",
+   "link_doctype": "Audit",
+   "link_fieldname": "compliance_standard"
+  }
+ ],
+ "modified": "2026-07-03 16:09:53.023891",
+ "modified_by": "Administrator",
+ "module": "Compliance Center",
+ "name": "Compliance Standard",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

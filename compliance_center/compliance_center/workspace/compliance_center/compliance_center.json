@@ -1,7 +1,7 @@
 {
  "app": "compliance_center",
  "charts": [],
- "content": "[{\"id\": \"cc-header-1\", \"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h4\\\"><b>Compliance Center</b></span>\", \"col\": 12}}, {\"id\": \"cc-shortcut-1\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Procedure\", \"col\": 3}}, {\"id\": \"cc-shortcut-2\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Document Classification\", \"col\": 3}}]",
+ "content": "[{\"id\": \"cc-header-1\", \"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h4\\\"><b>Compliance Center</b></span>\", \"col\": 12}}, {\"id\": \"cc-shortcut-1\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Procedure\", \"col\": 3}}, {\"id\": \"cc-shortcut-2\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Document Classification\", \"col\": 3}}, {\"id\": \"cc-shortcut-3\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Objective\", \"col\": 3}}, {\"id\": \"cc-shortcut-4\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Objective Monitoring\", \"col\": 3}}, {\"id\": \"cc-shortcut-5\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Compliance Standard\", \"col\": 3}}, {\"id\": \"cc-shortcut-6\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Audit\", \"col\": 3}}, {\"id\": \"cc-shortcut-7\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Audit Finding\", \"col\": 3}}, {\"id\": \"cc-shortcut-8\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Audit Action Item\", \"col\": 3}}]",
  "creation": "2026-07-03 12:32:44.357206",
  "custom_blocks": [],
  "docstatus": 0,
@@ -14,7 +14,7 @@
  "label": "Compliance Center",
  "link_type": "DocType",
  "links": [],
- "modified": "2026-07-03 13:08:46.800673",
+ "modified": "2026-07-03 16:13:55.115038",
  "modified_by": "Administrator",
  "module": "Compliance Center",
  "name": "Compliance Center",
@@ -35,6 +35,42 @@
    "doc_view": "List",
    "label": "Document Classification",
    "link_to": "Document Classification",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "Objective",
+   "link_to": "Objective",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "Objective Monitoring",
+   "link_to": "Objective Monitoring",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "Compliance Standard",
+   "link_to": "Compliance Standard",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "Audit",
+   "link_to": "Audit",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "Audit Finding",
+   "link_to": "Audit Finding",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "Audit Action Item",
+   "link_to": "Audit Action Item",
    "type": "DocType"
   }
  ],

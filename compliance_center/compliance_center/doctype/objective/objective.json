@@ -1,0 +1,109 @@
+{
+ "actions": [],
+ "allow_bulk_edit": 1,
+ "allow_rename": 1,
+ "autoname": "OBJ-.#####",
+ "creation": "2026-07-03 14:51:29.706928",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "objective_title",
+  "description",
+  "department",
+  "target",
+  "review_frequency",
+  "responsible_person",
+  "status",
+  "effective_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "objective_title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Objective",
+   "reqd": 1
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Department",
+   "options": "Department",
+   "reqd": 1
+  },
+  {
+   "description": "Numeric target value, e.g. 95, 4.5, 120. The objective is Met when the Actual result is greater than or equal to this value.",
+   "fieldname": "target",
+   "fieldtype": "Float",
+   "label": "Target",
+   "reqd": 1
+  },
+  {
+   "fieldname": "review_frequency",
+   "fieldtype": "Select",
+   "in_standard_filter": 1,
+   "label": "Frequency",
+   "options": "Monthly\nQuarterly\nAnnual",
+   "reqd": 1
+  },
+  {
+   "fieldname": "responsible_person",
+   "fieldtype": "Link",
+   "label": "Responsible Person",
+   "options": "User",
+   "reqd": 1
+  },
+  {
+   "default": "Active",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "Active\nDiscarded"
+  },
+  {
+   "depends_on": "eval:doc.status==\"Discarded\"",
+   "fieldname": "effective_from",
+   "fieldtype": "Date",
+   "label": "Effective From",
+   "mandatory_depends_on": "eval:doc.status==\"Discarded\""
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-07-03 15:46:13.740496",
+ "modified_by": "Administrator",
+ "module": "Compliance Center",
+ "name": "Objective",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

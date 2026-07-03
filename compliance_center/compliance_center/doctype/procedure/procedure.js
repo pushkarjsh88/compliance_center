@@ -68,7 +68,8 @@ function fetch_classification_label(frm) {
 
 function update_footer(frm) {
 	let department_label = frm.doc.department ? frm.doc.department.split(" - ")[0].trim() : null;
-	let left_parts = [frm.doc.company, frm.doc.procedure, department_label, frm.doc.version ? String(frm.doc.version) : null];
+	let version_label = frm.doc.version ? `V${frm.doc.version}` : null;
+	let left_parts = [frm.doc.company, frm.doc.procedure, department_label, version_label];
 	let left = left_parts.filter(Boolean).join(" ");
 	let classification_label = frm.doc.classification ? frm._classification_label || "" : "";
 	let footer = `${left} | ${classification_label}`.trim().replace(/^\|\s*/, "").replace(/\s*\|$/, "");

@@ -30,7 +30,8 @@ class Procedure(Document):
 
 	def set_footer(self):
 		department_label = self.department.split(" - ")[0].strip() if self.department else None
-		left_parts = [self.company, self.procedure, department_label, str(self.version) if self.version else None]
+		version_label = f"V{self.version}" if self.version else None
+		left_parts = [self.company, self.procedure, department_label, version_label]
 		left = " ".join(part for part in left_parts if part)
 		classification_label = ""
 		if self.classification:

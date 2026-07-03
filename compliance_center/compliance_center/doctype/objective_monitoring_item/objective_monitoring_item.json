@@ -1,0 +1,149 @@
+{
+ "actions": [],
+ "creation": "2026-07-03 15:17:28.049179",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "objective",
+  "target",
+  "actual_result",
+  "result",
+  "rca_capa_section",
+  "root_cause",
+  "corrective_action",
+  "action_owner",
+  "due_date",
+  "action_status",
+  "preventive_action_section",
+  "preventive_action",
+  "preventive_action_owner",
+  "preventive_due_date",
+  "preventive_action_status"
+ ],
+ "fields": [
+  {
+   "fieldname": "objective",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Objective",
+   "options": "Objective",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fetch_from": "objective.target",
+   "fieldname": "target",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Target",
+   "read_only": 1
+  },
+  {
+   "description": "Numeric value achieved for the period",
+   "fieldname": "actual_result",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Actual",
+   "reqd": 1
+  },
+  {
+   "description": "Automatically determined: Met when Actual >= Target",
+   "fieldname": "result",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Result",
+   "options": "Met\nNot Met",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.result==\"Not Met\"",
+   "fieldname": "rca_capa_section",
+   "fieldtype": "Section Break",
+   "label": "RCA & CAPA"
+  },
+  {
+   "depends_on": "eval:doc.result==\"Not Met\"",
+   "fieldname": "root_cause",
+   "fieldtype": "Small Text",
+   "label": "Root Cause",
+   "mandatory_depends_on": "eval:doc.result==\"Not Met\""
+  },
+  {
+   "depends_on": "eval:doc.result==\"Not Met\"",
+   "fieldname": "corrective_action",
+   "fieldtype": "Small Text",
+   "label": "Corrective Action",
+   "mandatory_depends_on": "eval:doc.result==\"Not Met\""
+  },
+  {
+   "depends_on": "eval:doc.result==\"Not Met\"",
+   "fieldname": "action_owner",
+   "fieldtype": "Link",
+   "label": "Action Owner",
+   "options": "User"
+  },
+  {
+   "depends_on": "eval:doc.result==\"Not Met\"",
+   "fieldname": "due_date",
+   "fieldtype": "Date",
+   "label": "Due Date"
+  },
+  {
+   "default": "Open",
+   "depends_on": "eval:doc.result==\"Not Met\"",
+   "fieldname": "action_status",
+   "fieldtype": "Select",
+   "label": "Action Status",
+   "options": "Open\nDone"
+  },
+  {
+   "depends_on": "eval:doc.result==\"Not Met\"",
+   "fieldname": "preventive_action_section",
+   "fieldtype": "Section Break",
+   "label": "Preventive Action"
+  },
+  {
+   "depends_on": "eval:doc.result==\"Not Met\"",
+   "fieldname": "preventive_action",
+   "fieldtype": "Small Text",
+   "label": "Preventive Action",
+   "mandatory_depends_on": "eval:doc.result==\"Not Met\""
+  },
+  {
+   "depends_on": "eval:doc.result==\"Not Met\"",
+   "fieldname": "preventive_action_owner",
+   "fieldtype": "Link",
+   "label": "Preventive Action Owner",
+   "options": "User"
+  },
+  {
+   "depends_on": "eval:doc.result==\"Not Met\"",
+   "fieldname": "preventive_due_date",
+   "fieldtype": "Date",
+   "label": "Preventive Due Date"
+  },
+  {
+   "default": "Open",
+   "depends_on": "eval:doc.result==\"Not Met\"",
+   "fieldname": "preventive_action_status",
+   "fieldtype": "Select",
+   "label": "Preventive Action Status",
+   "options": "Open\nDone"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-07-03 15:51:49.115415",
+ "modified_by": "Administrator",
+ "module": "Compliance Center",
+ "name": "Objective Monitoring Item",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

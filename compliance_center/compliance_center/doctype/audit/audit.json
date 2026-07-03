@@ -1,0 +1,106 @@
+{
+ "actions": [],
+ "allow_bulk_edit": 1,
+ "allow_rename": 1,
+ "autoname": "AUD-.#####",
+ "creation": "2026-07-03 16:09:53.023891",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "compliance_standard",
+  "audit_type",
+  "audit_date",
+  "auditor",
+  "status",
+  "findings",
+  "audit_report"
+ ],
+ "fields": [
+  {
+   "fieldname": "compliance_standard",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Compliance Standard",
+   "options": "Compliance Standard",
+   "reqd": 1
+  },
+  {
+   "fieldname": "audit_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Audit Type",
+   "options": "Internal\nExternal",
+   "reqd": 1
+  },
+  {
+   "fieldname": "audit_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Audit Date",
+   "reqd": 1
+  },
+  {
+   "description": "Name of the internal auditor or external audit firm",
+   "fieldname": "auditor",
+   "fieldtype": "Data",
+   "label": "Auditor",
+   "reqd": 1
+  },
+  {
+   "default": "Scheduled",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "Scheduled\nIn Progress\nCompleted"
+  },
+  {
+   "fieldname": "findings",
+   "fieldtype": "Text Editor",
+   "label": "Findings / Observations"
+  },
+  {
+   "fieldname": "audit_report",
+   "fieldtype": "Attach",
+   "label": "Audit Report"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [
+  {
+   "group": "Action Items",
+   "link_doctype": "Audit Action Item",
+   "link_fieldname": "audit"
+  }
+ ],
+ "modified": "2026-07-03 16:09:53.023891",
+ "modified_by": "Administrator",
+ "module": "Compliance Center",
+ "name": "Audit",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
