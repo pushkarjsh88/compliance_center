@@ -1,0 +1,193 @@
+{
+ "actions": [],
+ "allow_bulk_edit": 1,
+ "allow_rename": 1,
+ "creation": "2026-07-03 11:58:14.676045",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "details_tab",
+  "procedure",
+  "process_owner",
+  "document_type",
+  "company",
+  "details_column_break",
+  "department",
+  "classification",
+  "version",
+  "status",
+  "footer_section",
+  "footer",
+  "control_tab",
+  "version_control",
+  "terms_used",
+  "procedure_tab",
+  "purpose",
+  "scope",
+  "responsibility",
+  "procedure_details"
+ ],
+ "fields": [
+  {
+   "fieldname": "details_tab",
+   "fieldtype": "Tab Break",
+   "label": "Details"
+  },
+  {
+   "fieldname": "procedure",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Procedure",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Department",
+   "options": "Department",
+   "reqd": 1
+  },
+  {
+   "description": "Automatically set to the latest version entered in the Version Control table (Control tab).",
+   "fieldname": "version",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Version",
+   "read_only": 1
+  },
+  {
+   "default": "Draft",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "Draft\nUnder Review\nApproved\nActive\nArchived"
+  },
+  {
+   "fieldname": "control_tab",
+   "fieldtype": "Tab Break",
+   "label": "Control"
+  },
+  {
+   "description": "Track every revision of this procedure \u2014 record the version number, date, and who created and approved each change.",
+   "fieldname": "version_control",
+   "fieldtype": "Table",
+   "label": "Version Control",
+   "options": "Version Control"
+  },
+  {
+   "description": "Define acronyms and terms referenced in this procedure so readers share a common glossary.",
+   "fieldname": "terms_used",
+   "fieldtype": "Table",
+   "label": "Terms Used",
+   "options": "Terms Used"
+  },
+  {
+   "fieldname": "procedure_tab",
+   "fieldtype": "Tab Break",
+   "label": "Procedure"
+  },
+  {
+   "fieldname": "purpose",
+   "fieldtype": "Text Editor",
+   "label": "Purpose",
+   "reqd": 1
+  },
+  {
+   "fieldname": "scope",
+   "fieldtype": "Text Editor",
+   "label": "Scope",
+   "reqd": 1
+  },
+  {
+   "fieldname": "responsibility",
+   "fieldtype": "Text Editor",
+   "label": "Responsibility",
+   "reqd": 1
+  },
+  {
+   "fieldname": "procedure_details",
+   "fieldtype": "Text Editor",
+   "label": "Procedure",
+   "reqd": 1
+  },
+  {
+   "fieldname": "process_owner",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Process Owner",
+   "options": "User"
+  },
+  {
+   "fieldname": "document_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Document Type",
+   "options": "Policy\nProcedure\nWork Instruction\nManual\nGuideline\nStandard\nForm\nChecklist\nRecord\nTemplate"
+  },
+  {
+   "fieldname": "details_column_break",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "fieldname": "classification",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Classification",
+   "options": "Document Classification"
+  },
+  {
+   "fieldname": "footer_section",
+   "fieldtype": "Section Break"
+  },
+  {
+   "description": "Auto-generated as: Company Procedure Department Version | Classification",
+   "fieldname": "footer",
+   "fieldtype": "Small Text",
+   "label": "Footer",
+   "read_only": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-07-03 13:42:36.245852",
+ "modified_by": "Administrator",
+ "module": "Compliance Center",
+ "name": "Procedure",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

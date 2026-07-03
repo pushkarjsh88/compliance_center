@@ -1,0 +1,43 @@
+{
+ "app": "compliance_center",
+ "charts": [],
+ "content": "[{\"id\": \"cc-header-1\", \"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h4\\\"><b>Compliance Center</b></span>\", \"col\": 12}}, {\"id\": \"cc-shortcut-1\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Procedure\", \"col\": 3}}, {\"id\": \"cc-shortcut-2\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Document Classification\", \"col\": 3}}]",
+ "creation": "2026-07-03 12:32:44.357206",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "hide_custom": 0,
+ "icon": "shield",
+ "idx": 0,
+ "indicator_color": "blue",
+ "is_hidden": 0,
+ "label": "Compliance Center",
+ "link_type": "DocType",
+ "links": [],
+ "modified": "2026-07-03 13:08:46.800673",
+ "modified_by": "Administrator",
+ "module": "Compliance Center",
+ "name": "Compliance Center",
+ "number_cards": [],
+ "owner": "Administrator",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [],
+ "sequence_id": 0.0,
+ "shortcuts": [
+  {
+   "doc_view": "List",
+   "label": "Procedure",
+   "link_to": "Procedure",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "List",
+   "label": "Document Classification",
+   "link_to": "Document Classification",
+   "type": "DocType"
+  }
+ ],
+ "title": "Compliance Center",
+ "type": "Workspace"
+}

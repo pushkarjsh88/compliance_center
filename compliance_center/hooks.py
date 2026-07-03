@@ -5,28 +5,29 @@ app_description = "A centralized application for managing compliance procedures,
 app_email = "pushkar@frappe.io"
 app_license = "mit"
 
+app_logo_url = "/assets/compliance_center/images/compliance-center-logo.svg"
+
 # Apps
 # ------------------
 
-# required_apps = []
+required_apps = []
 
 # Each item in the list will be shown as an app in the apps page
-# add_to_apps_screen = [
-# 	{
-# 		"name": "compliance_center",
-# 		"logo": "/assets/compliance_center/logo.png",
-# 		"title": "Compliance Center",
-# 		"route": "/compliance_center",
-# 		"has_permission": "compliance_center.api.permission.has_app_permission"
-# 	}
-# ]
+add_to_apps_screen = [
+	{
+		"name": "compliance_center",
+		"logo": "/assets/compliance_center/images/compliance-center-logo.svg",
+		"title": "Compliance Center",
+		"route": "/desk/compliance-center",
+	}
+]
 
 # Includes in <head>
 # ------------------
 
 # include js, css files in header of desk.html
 # app_include_css = "/assets/compliance_center/css/compliance_center.css"
-# app_include_js = "/assets/compliance_center/js/compliance_center.js"
+app_include_js = "/assets/compliance_center/js/compliance_center.js"
 
 # include js, css files in header of web template
 # web_include_css = "/assets/compliance_center/css/compliance_center.css"
