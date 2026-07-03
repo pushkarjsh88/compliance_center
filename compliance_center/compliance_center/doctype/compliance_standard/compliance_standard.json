@@ -50,7 +50,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-07-03 16:49:01.479326",
+ "modified": "2026-07-03 17:09:01.297956",
  "modified_by": "Administrator",
  "module": "Compliance Center",
  "name": "Compliance Standard",
@@ -74,5 +74,6 @@
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
+ "title_field": "standard_name",
  "track_changes": 1
 }

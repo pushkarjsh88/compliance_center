@@ -2,5 +2,10 @@
 // For license information, please see license.txt
 
 frappe.ui.form.on("Audit", {
+	onload(frm) {
+		frm.set_query("compliance_standards", () => ({
+			filters: { status: "Active" },
+		}));
+	},
 	refresh(frm) {},
 });
