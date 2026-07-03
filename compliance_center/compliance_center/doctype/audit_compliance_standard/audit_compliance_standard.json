@@ -1,17 +1,18 @@
 {
  "actions": [],
- "creation": "2026-07-03 16:32:39.048250",
+ "creation": "2026-07-03 16:45:00.000000",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "auditor_name"
+  "compliance_standard"
  ],
  "fields": [
   {
-   "fieldname": "auditor_name",
-   "fieldtype": "Data",
+   "fieldname": "compliance_standard",
+   "fieldtype": "Link",
    "in_list_view": 1,
-   "label": "Auditor Name",
+   "label": "Compliance Standard",
+   "options": "Compliance Standard",
    "reqd": 1
   }
  ],
@@ -21,7 +22,7 @@
  "modified": "2026-07-03 16:45:00.000000",
  "modified_by": "Administrator",
  "module": "Compliance Center",
- "name": "Audit Auditor",
+ "name": "Audit Compliance Standard",
  "owner": "Administrator",
  "permissions": [],
  "sort_field": "creation",

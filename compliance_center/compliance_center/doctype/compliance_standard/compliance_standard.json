@@ -49,14 +49,8 @@
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
- "links": [
-  {
-   "group": "Audits",
-   "link_doctype": "Audit",
-   "link_fieldname": "compliance_standard"
-  }
- ],
- "modified": "2026-07-03 16:29:27.241560",
+ "links": [],
+ "modified": "2026-07-03 16:49:01.479326",
  "modified_by": "Administrator",
  "module": "Compliance Center",
  "name": "Compliance Standard",
