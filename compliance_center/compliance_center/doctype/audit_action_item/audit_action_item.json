@@ -13,11 +13,14 @@
   "audit_date",
   "finding_type",
   "finding_details",
-  "action_required",
+  "root_cause_analysis",
+  "corrective_action",
+  "preventive_action",
   "responsible_person",
   "eta",
   "status",
-  "evidence"
+  "actions_taken",
+  "attachment"
  ],
  "fields": [
   {
@@ -61,10 +64,19 @@
    "reqd": 1
   },
   {
-   "fieldname": "action_required",
+   "fieldname": "root_cause_analysis",
    "fieldtype": "Small Text",
-   "label": "Action Required",
-   "reqd": 1
+   "label": "Root Cause Analysis"
+  },
+  {
+   "fieldname": "corrective_action",
+   "fieldtype": "Small Text",
+   "label": "Corrective Action"
+  },
+  {
+   "fieldname": "preventive_action",
+   "fieldtype": "Small Text",
+   "label": "Preventive Action"
   },
   {
    "fieldname": "responsible_person",
@@ -84,20 +96,27 @@
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Status",
-   "options": "Open\nIn Progress\nClosed"
+   "options": "Open\nIn Progress\nOn Hold\nClosed\nDiscarded"
   },
   {
    "depends_on": "eval:doc.status==\"Closed\"",
-   "fieldname": "evidence",
+   "fieldname": "actions_taken",
+   "fieldtype": "Small Text",
+   "label": "Actions Taken",
+   "mandatory_depends_on": "eval:doc.status==\"Closed\""
+  },
+  {
+   "depends_on": "eval:doc.status==\"Closed\"",
+   "fieldname": "attachment",
    "fieldtype": "Attach",
-   "label": "Evidence",
+   "label": "Attachment",
    "mandatory_depends_on": "eval:doc.status==\"Closed\""
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-07-03 16:48:27.267299",
+ "modified": "2026-07-03 17:17:32.968612",
  "modified_by": "Administrator",
  "module": "Compliance Center",
  "name": "Audit Action Item",
