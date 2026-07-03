@@ -9,34 +9,25 @@
  "engine": "InnoDB",
  "field_order": [
   "standard_name",
-  "standard_code",
   "issuing_body",
   "version",
-  "effective_date",
-  "status",
-  "scope",
-  "description"
+  "status"
  ],
  "fields": [
   {
    "fieldname": "standard_name",
    "fieldtype": "Data",
    "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Standard Name",
    "reqd": 1,
    "unique": 1,
    "description": "e.g. ISO 9001:2015"
   },
   {
-   "fieldname": "standard_code",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Standard Code",
-   "description": "e.g. ISO9001"
-  },
-  {
    "fieldname": "issuing_body",
    "fieldtype": "Data",
+   "in_standard_filter": 1,
    "label": "Issuing Body",
    "description": "e.g. International Organization for Standardization"
   },
@@ -47,11 +38,6 @@
    "description": "e.g. 2015"
   },
   {
-   "fieldname": "effective_date",
-   "fieldtype": "Date",
-   "label": "Effective Date"
-  },
-  {
    "default": "Active",
    "fieldname": "status",
    "fieldtype": "Select",
@@ -59,16 +45,6 @@
    "in_standard_filter": 1,
    "label": "Status",
    "options": "Active\nInactive"
-  },
-  {
-   "fieldname": "scope",
-   "fieldtype": "Small Text",
-   "label": "Scope"
-  },
-  {
-   "fieldname": "description",
-   "fieldtype": "Text",
-   "label": "Description"
   }
  ],
  "grid_page_length": 50,
@@ -80,7 +56,7 @@
    "link_fieldname": "compliance_standard"
   }
  ],
- "modified": "2026-07-03 16:09:53.023891",
+ "modified": "2026-07-03 16:29:27.241560",
  "modified_by": "Administrator",
  "module": "Compliance Center",
  "name": "Compliance Standard",

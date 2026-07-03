@@ -5,17 +5,19 @@
  "autoname": "AAI-.#####",
  "creation": "2026-07-03 16:09:53.023891",
  "doctype": "DocType",
- "editable_grid": 1,
  "engine": "InnoDB",
+ "editable_grid": 1,
  "field_order": [
   "audit",
   "compliance_standard",
+  "audit_date",
   "finding_type",
   "finding_details",
   "action_required",
-  "action_owner",
-  "due_date",
-  "status"
+  "responsible_person",
+  "eta",
+  "status",
+  "evidence"
  ],
  "fields": [
   {
@@ -24,7 +26,6 @@
    "in_list_view": 1,
    "label": "Audit",
    "options": "Audit",
-   "read_only": 1,
    "reqd": 1
   },
   {
@@ -34,7 +35,15 @@
    "in_list_view": 1,
    "label": "Compliance Standard",
    "options": "Compliance Standard",
-   "read_only": 1
+   "reqd": 1
+  },
+  {
+   "fetch_from": "audit.audit_date",
+   "fieldname": "audit_date",
+   "fieldtype": "Date",
+   "label": "Audit Date",
+   "read_only": 1,
+   "reqd": 1
   },
   {
    "fieldname": "finding_type",
@@ -59,15 +68,15 @@
    "reqd": 1
   },
   {
-   "fieldname": "action_owner",
+   "fieldname": "responsible_person",
    "fieldtype": "Link",
-   "label": "Action Owner",
+   "label": "Responsible Person",
    "options": "User"
   },
   {
-   "fieldname": "due_date",
+   "fieldname": "eta",
    "fieldtype": "Date",
-   "label": "Due Date"
+   "label": "ETA"
   },
   {
    "default": "Open",
@@ -77,12 +86,19 @@
    "in_standard_filter": 1,
    "label": "Status",
    "options": "Open\nIn Progress\nClosed"
+  },
+  {
+   "depends_on": "eval:doc.status==\"Closed\"",
+   "fieldname": "evidence",
+   "fieldtype": "Attach",
+   "label": "Evidence",
+   "mandatory_depends_on": "eval:doc.status==\"Closed\""
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-07-03 16:09:53.023891",
+ "modified": "2026-07-03 16:40:21.754612",
  "modified_by": "Administrator",
  "module": "Compliance Center",
  "name": "Audit Action Item",

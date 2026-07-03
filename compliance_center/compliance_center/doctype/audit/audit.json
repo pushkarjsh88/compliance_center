@@ -11,9 +11,9 @@
   "compliance_standard",
   "audit_type",
   "audit_date",
-  "auditor",
+  "audit_firm",
+  "auditors",
   "status",
-  "findings",
   "audit_report"
  ],
  "fields": [
@@ -32,7 +32,7 @@
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Audit Type",
-   "options": "Internal\nExternal",
+   "options": "\nInternal\nExternal",
    "reqd": 1
   },
   {
@@ -43,25 +43,24 @@
    "reqd": 1
   },
   {
-   "description": "Name of the internal auditor or external audit firm",
-   "fieldname": "auditor",
+   "description": "Name of the external audit firm, if applicable",
+   "fieldname": "audit_firm",
    "fieldtype": "Data",
-   "label": "Auditor",
-   "reqd": 1
+   "label": "Audit Firm"
   },
   {
-   "default": "Scheduled",
+   "fieldname": "auditors",
+   "fieldtype": "Table MultiSelect",
+   "label": "Auditors",
+   "options": "Audit Auditor"
+  },
+  {
    "fieldname": "status",
    "fieldtype": "Select",
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Status",
-   "options": "Scheduled\nIn Progress\nCompleted"
-  },
-  {
-   "fieldname": "findings",
-   "fieldtype": "Text Editor",
-   "label": "Findings / Observations"
+   "options": "\nScheduled\nIn Progress\nCompleted\nRescheduled\nCancelled"
   },
   {
    "fieldname": "audit_report",
@@ -78,7 +77,7 @@
    "link_fieldname": "audit"
   }
  ],
- "modified": "2026-07-03 16:09:53.023891",
+ "modified": "2026-07-03 16:34:50.608073",
  "modified_by": "Administrator",
  "module": "Compliance Center",
  "name": "Audit",
